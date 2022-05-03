@@ -344,11 +344,9 @@ body{
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-    padding: 0.5rem 4%;
+    padding: 0.7rem 4%;
     color: #767676;
 }
-
-
 
 .contact-form input[type='submit']{
     width: 100px;
@@ -385,6 +383,10 @@ body{
     display: flex;
 }
 
+.downloadApp form input{
+    height: 45px;
+}
+
 .downloadApp .Enter_num span{
     background: #F7F7F7;
     border-radius: 4px 0px 0px 4px;
@@ -395,7 +397,6 @@ body{
 
 .downloadApp .Enter_num input{
     background-color: #fff;
-    height: 45px;
     border: none;
     outline: none;
     padding: 0 20px;
