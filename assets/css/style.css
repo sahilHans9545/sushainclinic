@@ -5,15 +5,15 @@
 }
 
 html{
-    font-size:90%
+    /* font-size:90% */
 }
 
 body{
     color: var(--secondary-color);
     width: 100%;
     overflow-x: hidden;
-    font-family: 'Montserrat',
-    sans-serif;
+    /* font-family: 'Montserrat',
+    sans-serif; */
 }
 
 
@@ -88,6 +88,13 @@ body{
     color: #fff;
     border-radius: 10px;
     position: relative;
+    overflow: hidden;
+}
+
+
+.hero-slide-heading span{
+    color: rgb(135, 233, 250);
+    font-weight: 700;
 }
 
 .Hero-Section .book_appointment_btn{
@@ -110,7 +117,6 @@ body{
 
 .Hero-Section .hero-img img{
     position: relative;
-    /* height: 110%; */
     height: 350px;
 }
 
@@ -123,6 +129,11 @@ body{
     position: absolute;
     bottom: 0%;
     left: 0%;
+}
+
+.hero-slider{
+    width: 200%; 
+    /* 100% width is for one slide */
 }
 
 
@@ -150,7 +161,7 @@ body{
 
 .what-patient-speak .slider video{
     width: 100%;
-    height: 340px;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -211,10 +222,6 @@ body{
 }
 
 /* Service Section */
-.Service-Section img{
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-}
 
 
 /* Veteren section */
@@ -233,6 +240,7 @@ body{
 .veteren-slider .profile-img img{
     width: 250px;
     height: 250px;
+    object-fit: cover;
     border-radius: 50%;
 }
 
@@ -259,11 +267,11 @@ body{
 }
 
 .left-veteren{
-    left: 2rem;
+    left: 5%;
 }
 
 .right-veteren{
-    right: 2rem;
+    right: 5%;
 }
 
 /* makes_different section */
@@ -276,6 +284,22 @@ body{
     background-color: #fff;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.02);
     border-radius: 10px;
+}
+
+.makes_different .item .icon-img{
+    background: linear-gradient(99.2deg, rgba(60, 194, 219, 0.1) -0.22%, rgba(52, 169, 191, 0.1) 99.78%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dotted var(--primary-color);
+}
+
+.makes_different .item .icon-img img{
+    max-width: 30px;
+
 }
 
 /* Contact us section */
@@ -444,10 +468,19 @@ body{
 
 }
 
-.testimonial-card .profile-img img{
+.testimonial-card .profile-img{
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    background-image: url(../images/guest-icon.ico);
+    background-size: cover;
+}
+
+.testimonial-card .profile-img img{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 .testimonial-card .profile-img{
@@ -526,6 +559,45 @@ body{
 }
 
 @media screen and (max-width:568px) {
+
+
+    body{
+        padding-top: 85px;  
+        /* padding top is to give space from top as nav is fixed */
+    }
+
+    .header nav {
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        padding: 1.25rem 1rem;
+        background-color: #fff;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .Search-signOptions{
+        gap: 0 !important;
+    }
+
+    #header_searchbar{
+        flex: 1;
+        width: auto;
+        padding: 0 0.5rem;
+    }
+
+    .cart {
+        position: fixed;
+        top: 1.4rem;
+        right: 50px;
+        font-size: large;
+        z-index: 2;
+    }
+
+    .Search-signOptions button{
+        padding: 0.7rem 0.8rem;
+    }
+
     .veteren-slider .profile-img img {
         width: 200px;
         height: 200px;
@@ -552,6 +624,8 @@ body{
     .blog_slider .blog_card {
         width: 100%;
     }
+
+    
 
     
 }
@@ -626,6 +700,7 @@ body{
     .testimonial-controls {
         bottom: 20px;
     }
+
 }
 
 @media screen and (max-width:1300px){
