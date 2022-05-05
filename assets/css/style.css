@@ -424,7 +424,9 @@ body{
 
 .downloadApp{
     background: #34aabf17; ;
-    padding-left: 16%;
+    padding-left: 16% !important;
+    border-radius: 20px;
+    position: relative;
 }
 
 .downloadApp .Enter_num{
@@ -734,6 +736,33 @@ body{
         top: 6rem;
     }
 
+    .contact-info,.contact-form {
+        padding: 2rem 1.2rem;
+    }
+
+    .downloadApp{
+        padding-left: 0;
+    }
+    .downloadApp .phone-img{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: auto;
+    }
+
+    .downloadApp .phone-img img{
+        width: 170px;
+    }
+
+    .veteren-slide{
+        display: flex;
+        padding: 0 1.2rem;
+    }
+
+    .veteren-slide .profile-img img{
+        width: 75px !important;
+        height: 75px !important;
+    }
     
 }
 
@@ -786,26 +815,19 @@ body{
 
 
     .testimonial-section {
-        height: 100%;
-        margin-top: 0px;
-        overflow: hidden;
-        padding-bottom: 50px;
+        height: 300px;
+        margin-top: 120px;
     }
     
-    .testimonial-slider {
-        position: relative;
-        top: 15px;
-        width: 300%;
-    }
-    
-    .testimonial-card {
-        height: auto;
-        position: relative;
-        width: 100%;
-    }
 
     .downloadApp {
-        padding-left: 0%;
+        padding: auto 1rem  !important;
+        padding-left: 1rem !important;
+    }
+
+    .veteren-slide .profile-img img {
+        width: 100px;
+        height: 100px;
     }
 }
 
