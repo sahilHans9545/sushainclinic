@@ -206,6 +206,7 @@ body{
     
 }
 
+
 .what-patient-speak .slide .whatsappShare img{
     width: 50px;
     height: 50%;
@@ -216,6 +217,28 @@ body{
     background: var(--primary-green-bg);
     width: 35%;
 }
+
+
+.what-patient-speak .patient-slider-controls {
+    position: relative;
+    top: 20px;
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.what-patient-speak .patient-slider-controls i{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 
 /* Service Section */
 
@@ -313,7 +336,7 @@ body{
 .contact-info{
     background: linear-gradient(99.2deg, #3CC2DB -0.22%, #34A9BF 99.78%);
     border-radius: 10px;
-    padding: 3rem 10%;
+    padding: 3rem 8%;
     color: #fff;
     word-break: break-all;
     position: relative;
@@ -360,7 +383,7 @@ body{
 }
 
 .contact-form{
-    padding: 3rem 10%;
+    padding: 3rem 8%;
 }
 
 .contact-form input, .contact-form textarea{
@@ -401,6 +424,7 @@ body{
 
 .downloadApp{
     background: #34aabf17; ;
+    padding-left: 10%;
 }
 
 .downloadApp .Enter_num{
@@ -619,7 +643,7 @@ body{
         top: 0%;
         padding: 1.25rem 1rem;
         background-color: #fff;
-        z-index: 1;
+        z-index: 100;
         width: 100%;
     }
 
@@ -638,7 +662,7 @@ body{
         top: 1.4rem;
         right: 50px;
         font-size: large;
-        z-index: 2;
+        z-index: 101;
     }
 
     .Search-signOptions button{
@@ -676,7 +700,34 @@ body{
         padding-bottom: 25px;
     }
 
-    
+    .what-patient-speak .overlay-slide{
+        position: absolute;
+        left: 0;
+        bottom: 0%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        z-index: 1;
+        padding: 1rem;
+    }
+
+    .what-patient-speak .overlay-slide .patient-slider-controls i{
+        color: var(--secondary-color);
+    }
+
+    .what-patient-speak .slider .green-bg-box{
+        display: none;
+    }
+
+    .what-patient-speak .slider{
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .what-patient-speak .slide .whatsappShare{
+        right: 20px;
+        top: 6rem;
+    }
 
     
 }
@@ -746,6 +797,10 @@ body{
         height: auto;
         position: relative;
         width: 100%;
+    }
+
+    .downloadApp {
+        padding-left: 0%;
     }
 }
 
