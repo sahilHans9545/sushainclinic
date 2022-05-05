@@ -636,6 +636,30 @@ body{
     color: #000;
 }
 
+.bottom-strip{
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: 1;
+}
+
+.bottom-strip .leftside, .bottom-strip .rightside{
+    border: none;
+    color: #fff;
+}
+
+.bottom-strip .leftside{
+    background: var(--primary-color);
+    width: 60%;
+}
+
+.bottom-strip .rightside{
+    background: var(--primary-green-bg);
+    width: 40%;
+}
+
 @media screen and (max-width:568px) {
 
 
@@ -762,6 +786,19 @@ body{
     .veteren-slide .profile-img img{
         width: 75px !important;
         height: 75px !important;
+    }
+
+    .hero-slider .slide{
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-slider .slide-left{
+        width: 60% !important;
+    }
+
+    .hero-slider .slide-right {
+        width: 40% !important;
     }
     
 }
