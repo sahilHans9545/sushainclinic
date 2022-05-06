@@ -21,9 +21,6 @@ let patient_slide_left = document.querySelector(
 let patient_slide_right = document.querySelector(
   ".patient-slider-controls .rightBtn"
 );
-);
-
-
 
 let patient_slide = 0;
 
