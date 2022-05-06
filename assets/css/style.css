@@ -179,7 +179,16 @@ body{
 
 .what-patient-speak .slider{
     position:relative;
+}
 
+.what-patient-speak .overlay-slide{
+    width: calc(100% - 110px);
+}
+
+.what-patient-speak .owl-theme .owl-nav {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
 }
 
 .what-patient-speak .slider .green-bg-box{
@@ -192,27 +201,6 @@ body{
     z-index: -1;
 }
 
-.what-patient-speak .slider .contact-strip{
-    width: 100%;
-    position: absolute;
-    top: 3rem;
-    left: -1rem;
-    border-radius: 10px 10px 0 0;
-    overflow: hidden;
-    display: flex;
-}
-
-.what-patient-speak .contact-strip button{
-    border: none;
-    color: #fff;
-    padding: 0.5rem 0;
-    text-align: center;
-}
-
-.what-patient-speak .contact-strip button:nth-child(1){
-    background-color: var(--primary-color);
-    width: 65%;
-}
 
 .what-patient-speak .slide .whatsappShare{
     position: absolute;
@@ -478,6 +466,49 @@ body{
     padding: 0 10px;
 }
 
+
+
+
+/* owl nav */
+.owl-next,
+.owl-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    width: 46px;
+    border-radius: 50% !important;
+    background: #ffffffe6 !important;
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 14%);
+    position: relative;
+    z-index: 1;
+}
+
+.owl-next::after,
+.owl-prev::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: 50%, 50%;
+}
+
+.owl-next::after {
+    background-image: url('../images/rightarrow.png');
+}
+
+.owl-prev::after {
+    background-image: url('../images/leftarrow.png');
+}
+
+.owl-next span,
+.owl-prev span {
+    display: none;
+}
+
 /* testimonial-section */
 .testimonial-section{
     width: 100%;
@@ -494,41 +525,9 @@ body{
 }
 
 .testimonial-slider .owl-next,.testimonial-slider .owl-prev{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 46px;
-    width: 46px;
-    border-radius: 50% !important;
-    background: #ffffffe6 !important;
-    box-shadow: 0px 2px 10px rgb(0 0 0 / 14%);
-    position: relative;
     top: 24px;
-    z-index: 1;
 }
 
-.testimonial-slider .owl-next::after , .testimonial-slider .owl-prev::after{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-repeat: no-repeat;
-    background-position: 50%,50%;
-}
-
-.testimonial-slider .owl-next::after{
-    background-image: url('../images/rightarrow.png');
-}
-
-.testimonial-slider .owl-prev::after {
-    background-image: url('../images/leftarrow.png');
-}
-
-.testimonial-slider .owl-next span , .testimonial-slider .owl-prev span{
-    display: none;
-}
 
 
 .testimonial-card{
@@ -678,6 +677,9 @@ body{
 
 @media screen and (max-width:568px) {
 
+    html{
+        font-size: 15px;
+    }
 
     body{
         padding-top: 85px;  
@@ -762,6 +764,11 @@ body{
         padding: 1rem;
     }
 
+    .what-patient-speak .owl-theme .owl-nav {
+        bottom: 30px;
+        right: 10px;
+    }
+
     .what-patient-speak .overlay-slide .patient-slider-controls i{
         color: var(--secondary-color);
     }
@@ -788,16 +795,22 @@ body{
 
     .downloadApp{
         padding-left: 0;
+        padding-bottom: 60px !important;
     }
     .downloadApp .phone-img{
         position: absolute;
         bottom: 0;
         right: 0;
         width: auto;
+        z-index: -1;
     }
 
     .downloadApp .phone-img img{
         width: 170px;
+    }
+
+    .downloadApp .Enter_num input{
+        padding: 0 5px;
     }
 
     .veteren-slide{
@@ -899,8 +912,8 @@ body{
     
 
     .downloadApp {
-        padding: auto 1rem  !important;
         padding-left: 1rem !important;
+        padding-right: 1rem !important;
     }
 
     .veteren-slide .profile-img img {
