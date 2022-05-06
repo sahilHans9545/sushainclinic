@@ -103,7 +103,7 @@ body{
 }
 
 .hero-slider .back-shadow-img{
-    height: auto !important;
+    height: auto;
     background: #ffffff83;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
@@ -127,6 +127,22 @@ body{
     border-radius: 4px;
     background: linear-gradient(92.62deg, #95CC4C 0%, #80AF41 100%);
     color: #fff;
+    transition: all 0.4s;
+    border: 1px solid #95CC4C;
+}
+
+.book_appointment_btn:hover{
+    background: #fff;
+    border: 1px solid var(--primary-color);
+}
+
+.book_appointment_btn:hover a{
+    color: var(--primary-color);
+}
+
+.book_appointment_btn a{
+    color: #fff;
+    text-decoration: none;
 }
 
 .Hero-Section .hero-img{
@@ -731,6 +747,10 @@ body{
         padding-bottom: 25px;
     }
 
+    .what-patient-speak{
+        flex-direction: column-reverse;
+    }
+
     .what-patient-speak .overlay-slide{
         position: absolute;
         left: 0;
@@ -757,7 +777,9 @@ body{
 
     .what-patient-speak .slide .whatsappShare{
         right: 20px;
-        top: 6rem;
+        top: 50%;
+        position: fixed;
+        z-index: 100;
     }
 
     .contact-info,.contact-form {
@@ -800,7 +822,26 @@ body{
     .hero-slider .slide-right {
         width: 40% !important;
     }
+
+    .Hero-Section .hero-img img{
+        height: 200px;
+    }
+
+    .Hero-Section .book_appointment_btn {
+        padding: 0.8rem 0.4rem;
+    }
     
+    .hero-slide-heading{
+        font-size: 16px;
+    }
+
+    .Hero-Section{
+        font-size: 14px;
+    }
+
+    .hero-slider .back-shadow-img{
+        height: 200px;
+    }
 }
 
 @media screen and (max-width:768px) {
