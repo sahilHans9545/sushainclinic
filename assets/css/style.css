@@ -435,6 +435,8 @@ body{
 
 .downloadApp .Enter_num{
     display: flex;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .downloadApp form input{
