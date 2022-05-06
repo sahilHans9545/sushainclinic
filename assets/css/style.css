@@ -322,6 +322,7 @@ body{
     align-items: center;
     justify-content: center;
     border: 1px dotted var(--primary-color);
+    flex-shrink: 0;
 }
 
 .makes_different .item .icon-img img{
@@ -384,6 +385,7 @@ body{
     align-items: center;
     justify-content: center;
     margin-right: 12px;
+    flex-shrink: 0;
 }
 
 .contact-form{
@@ -767,8 +769,16 @@ body{
     }
 
     .what-patient-speak .owl-theme .owl-nav {
-        bottom: 30px;
-        right: 10px;
+        display: flex;
+        left: 0;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    .owl-next,
+    .owl-prev {
+        height: 40px;
+        width: 40px;
     }
 
     .what-patient-speak .overlay-slide .patient-slider-controls i{
