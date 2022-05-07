@@ -526,12 +526,17 @@ body{
 
 .testimonial-slider{
     position: absolute !important;
-    bottom: 100px;
+    bottom: 70px;
+}
+
+.testimonial-section .testimonial-content {
+    height: 100px;
+    overflow: hidden;
 }
 
 
 .testimonial-section .owl-nav{
-    bottom: calc(0% - 100px);
+    bottom: calc(0% - 70px);
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
@@ -764,9 +769,15 @@ body{
         height: 200px;
     }
 
-    .testimonial-section .owl-nav{
-        bottom: auto;
+    .testimonial-slider {
+        bottom: 70px;
     }
+
+    .testimonial-section .owl-nav{
+        bottom: -40px;
+    }
+
+    
 
     .what-patient-speak{
         flex-direction: column-reverse;
@@ -785,6 +796,8 @@ body{
 
     .what-patient-speak .owl-theme .owl-nav {
         display: flex;
+        width:100%;
+        justify-content: space-between;
         left: 0;
         bottom: 50%;
         transform: translateY(50%);
