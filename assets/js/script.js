@@ -31,14 +31,14 @@ function pauseAll(elem) {
     }
     videos[i].pause();
   }
-  alert("hello");
+  // alert("hello");
 }
 
 for (var i = 0; i < videos.length; i++)
   videos[i].addEventListener(
     "pause",
     function () {
-      alert("paused");
+      // alert("paused");
     },
     true
   );
