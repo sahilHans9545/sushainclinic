@@ -12,44 +12,24 @@ close_mobileMenu.addEventListener("click", () => {
     .classList.remove("active-mobileMenu");
 });
 
-// Multiple videos will not play at a time in what patient speaks about us
-var videos = document.querySelectorAll(".what-patient-speak video");
-for (var i = 0; i < videos.length; i++)
-  videos[i].addEventListener(
-    "play",
-    function () {
-      pauseAll(this);
-    },
-    true
-  );
+let video_popup = document.querySelector(".video-popup");
+let vp_video = video_popup.querySelector("video");
+console.log(vp_video);
+let close_video_popup = document.querySelector(".close_video_popup");
+let patient_video_play = document.querySelectorAll(
+  ".what-patient-speak .video-play"
+);
+console.log(patient_video_play);
 
-function pauseAll(elem) {
-  for (var i = 0; i < videos.length; i++) {
-    if (videos[i] == elem) {
-      videos[i].play();
-      continue;
-    }
-    videos[i].pause();
-  }
-  // alert("hello");
-}
+patient_video_play.forEach((video_play) => {
+  video_play.addEventListener("click", () => {
+    video_popup.classList.add("active-video-popup");
+    vp_video.src = video_play.getAttribute("video_url");
+    vp_video.play();
+  });
+});
 
-for (var i = 0; i < videos.length; i++)
-  videos[i].addEventListener(
-    "pause",
-    function () {
-      // alert("paused");
-    },
-    true
-  );
-
-// function pauseAll(elem) {
-//   for (var i = 0; i < videos.length; i++) {
-//     if (videos[i] == elem) {
-//       videos[i].play();
-//       continue;
-//     }
-//     videos[i].pause();
-//   }
-//   alert("hello");
-// }
+close_video_popup.addEventListener("click", () => {
+  video_popup.classList.remove("active-video-popup");
+  vp_video.pause();
+});

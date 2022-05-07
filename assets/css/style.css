@@ -183,7 +183,7 @@ body{
 
 /* what-patient-speak section */
 
-.what-patient-speak .slider video{
+.what-patient-speak .slider img{
     width: 100%;
     height: 450px;
     object-fit: cover;
@@ -213,47 +213,57 @@ body{
     z-index: -1;
 }
 
-
-.what-patient-speak .slide .whatsappShare{
+.what-patient-speak .video-play{
     position: absolute;
-    right: -10px;
-    top: -10px;
-    z-index: 1;
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 10000;
+}    
+
+.what-patient-speak .owl-nav{
+    z-index: 100 !important;
 }
 
-
-.what-patient-speak .slide .whatsappShare img{
-    width: 50px;
-    height: 50%;
-    border-radius: 50%;
+.what-patient-speak .video-popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    width: 600px;
+    height: 400px;
+    max-width: 80%;
+    display: none;
 }
 
-.what-patient-speak .contact-strip button:nth-child(2) {
-    background: var(--primary-green-bg);
-    width: 35%;
+.what-patient-speak .active-video-popup{
+    display: block;
 }
 
-
-.what-patient-speak .patient-slider-controls {
-    position: relative;
-    top: 20px;
-    display: flex;
-    gap: 1rem;
-    
+.what-patient-speak .video-popup video{
+    width: 100%;
+    height: 400px;
 }
 
-.what-patient-speak .patient-slider-controls i{
+.what-patient-speak .close_video_popup{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
     height: 40px;
     width: 40px;
+    background-color: #fff;
     border-radius: 50%;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.14);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.2rem;
     cursor: pointer;
+    z-index: 1;
 }
+
 
 
 /* Service Section */
@@ -804,21 +814,21 @@ body{
         margin-left: 50px;
     }
 
+    .testimonial-section .testimonial-content{
+        height: 108px;
+    }
+
     
 
     .what-patient-speak{
         flex-direction: column-reverse;
     }
 
-    .what-patient-speak .overlay-slide{
-        position: absolute;
-        left: 0;
-        bottom: 0%;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.2);
-        color: #fff;
-        z-index: 1;
-        padding: 1rem;
+
+    .what-patient-speak .video-play{
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%,0%);
     }
 
     .what-patient-speak .owl-theme .owl-nav {
