@@ -518,7 +518,7 @@ body{
 .testimonial-section{
     width: 100%;
     height: 250px;
-    margin-top: 300px;
+    margin-top:180px;
     background: linear-gradient(99.2deg, #3CC2DB 0%, #34A9BF 100%);
     position: relative;
     border-radius: 10px;
