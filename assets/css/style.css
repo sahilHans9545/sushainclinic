@@ -531,7 +531,7 @@ body{
 
 .testimonial-section .testimonial-content {
     height: 100px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 
