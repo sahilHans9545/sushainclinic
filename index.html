@@ -94,7 +94,7 @@
                     <i class="fa-solid fa-magnifying-glass"></i><input type="text"
                         placeholder="Search doctors, clinics, medicines">
                 </div>
-                <div class="cart">&nbsp;<img src="./assets/images/cart.png" alt="">(0)</div>
+                <div class="cart primary">&nbsp;<img src="./assets/images/cart.png" alt="">(0)</div>
                 <div><button id="signIn">Sign in</button></div>
                 <div><button id="signOut">Sign Up</button></div>
             </div>
@@ -703,7 +703,7 @@
 
     <div class="footer my-5 px-md-0 px-3">
         <div class="container">
-            <div class="row justify-content-between py-5">
+            <div class="inner-footer row justify-content-between py-5 flex-lg-nowrap flex-wrap">
                 <div class="col-md-5">
                     <div class="logo">
                         <img src="./assets/images/logo.png" alt="">
@@ -713,8 +713,8 @@
                         Wholeness.</p>
                 </div>
 
-                <div class="col-md-auto footer-links d-flex flex-wrap justify-content-between">
-                    <div class="mx-md-5">
+                <div class="col-md-auto footer-links d-flex justify-content-between gap-md-5">
+                    <div>
                         <p><strong>Quick Links</strong></p>
                         <ul>
                             <li><a href="https://sushainclinic.com/about"> About Us</a></li>
@@ -724,7 +724,7 @@
                             <li><a href="https://sushainclinic.com/order/index/allmedicines/all-type/all-category">Order Personal Care</a></li>
                         </ul>
                     </div>
-                    <div class="mx-md-5">
+                    <div>
                         <p><strong>Important Links</strong></p>
                         <ul>
                             <li><a href="https://sushainclinic.com/#camps">Healing Camps</a></li>
@@ -734,7 +734,7 @@
                             <li><a href="https://sushainclinic.com/doctor-signin">Doctor Login</a></li>
                         </ul>
                     </div>
-                    <div class="mx-md-4">
+                    <div>
                         <p><strong>Help & Support</strong></p>
                         <ul>
                             <li><a href="https://sushainclinic.com/home/refund_policy">Cancellation &amp; Refund </a></li>
@@ -803,6 +803,7 @@
         })
 
 
+
     $('.testimonial-slider').owlCarousel({
             loop: true,
             margin: 20,
@@ -822,12 +823,16 @@
             }
         })   
         
+    // changes in hero slider
     $(".hero-slider").owlCarousel({
             loop: true,
             margin: 20,
             dots: true,
-            nav: false,
-            items:1
+            nav: true,
+            items:1,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
     })
     
     $(".what-patient-speak .slider").owlCarousel({
